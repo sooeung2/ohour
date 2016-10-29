@@ -1,8 +1,17 @@
-// create a form component
 //students go to student login page
-//professor goes to professor login page
+//professor goes to professor dashboard
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router'
 
-const Home = () => <h1>Are you a professor or student?</h1>
+const Home = () => {
+  return (
+    <div>
+      <button className="btn btn-primary btn-block" onClick={() => browserHistory.push('/queue')}>
+      Student Login</button>
+      <button className="btn btn-primary btn-block" onClick={() => browserHistory.push('/professor-dashboard')}>
+      Professor Login</button>
+    </div>
+  )
+}
 
 export default Home
